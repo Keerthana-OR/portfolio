@@ -1,0 +1,218 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;/* placed in its normal postion */
+}
+
+#navbar{
+    display: flex;/* to place child element in inline */
+    width: 85%;
+    margin-left: 100px;
+    justify-content: space-between;/* horizontally child */
+    align-items: center;/* vertically center */
+}
+
+#logo{
+    width: 130px;
+}
+
+.listItem{
+    list-style: none;/* remove the styling of list items */
+    display: inline;
+    margin: 10px 15px;
+    font-weight: 700;/* to increase boldness */
+}
+/* pseudo class - used to define specific state of an element eg: hover,active,visited
+syntax- element:pseudo {property:value}  */
+li a:hover{
+    color: red;
+}
+li a{
+    text-decoration: none;/* remove underline */
+    color: black;
+}
+#detail{
+    margin-top: 13%;
+    margin-left: 8%;
+}
+#detail h1{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+#detail span{
+    color: orange;
+}
+#detail a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#image{
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    bottom: 0px;
+    right: 45px;
+}
+.group{
+    position: absolute;
+    height: 100%;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 2s;
+}
+#image:hover #shape{
+    bottom: 80px;
+}
+#image:hover #girl{
+    left: 40%;
+}
+#about{
+    margin: 14% 8% 0 8%;
+}
+.intro{
+    text-align: center;
+}
+.intro h1{
+    font-size: 27px;
+}
+.intro p{
+    font-size: 18px;
+    color: green;
+}
+#content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* it relate to html element font size(by default value is 16px) */
+    margin-top: 2rem;
+}
+#imge img{
+    width: 80%;
+}
+#para{
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 450;
+}
+#information{
+    margin-top: 2rem;
+}
+.info{
+    margin-top: 1rem;
+}
+.info span{
+    margin-left: 1rem;
+}
+#skill{
+    margin: 8% 8% 0 8%;
+}
+#skill_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+#skill_image{
+    width: 90%;
+}
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+}
+.bar-container span{
+    font-weight: 700;
+    font-size: 18px;
+}
+.bar{
+    width: 90%;
+    height: 0.4rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+#html_bar{
+    width: 85%;
+    background-color: orange;
+}
+#css_bar{
+    width: 78%;
+    background-color: orange;
+}
+#js_bar{
+    width: 79%;
+    background-color: orange;
+}
+#react_bar{
+    width: 75%;
+    background-color: orange;
+}
+#contact{
+    margin-top: 5%;
+}
+.icon-set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.icon, .up-arrow{
+    width: 50px;
+    height: 50px;
+    margin: 0px 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon i{
+    color: black;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom right,yellow,rgb(244, 120, 37));
+    animation: shake 0.75s;
+}
+.icon:hover i{
+    color: white;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+footer{
+    padding: 3rem 0px;
+}
+footer p{
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+}
+.up-arrow{
+    background-image: linear-gradient(to bottom right,yellow,rgb(244, 120, 37));
+    float: right;
+    margin: 10px 50px 50px 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
